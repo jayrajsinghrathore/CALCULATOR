@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Calculator</title>
+    <link rel="stylesheet" href="CAL.CSS">
+</head>
+<body class="dark-mode">
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="top-bar">
+                <div class="theme-toggle-container">
+                    <label class="theme-toggle">
+                        <input type="checkbox" id="themeSwitch" onchange="toggleTheme()" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <a href="https://www.linkedin.com/in/jayraj-singh-rathore-786b13217/" target="_blank" class="linkedin-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" />
+                </a>
+            </div>
+            <div class="display">
+                <div id="history" class="history"></div>
+                <input type="text" id="currentInput" class="current-input" disabled />
+            </div>
+            <div class="buttons">
+                
+                <button class="btn operator" onclick="clearDisplay()">C</button>
+                <button class="btn operator" onclick="deleteLast()">⌫</button>
+                <button class="btn operator" onclick="appendToDisplay('%')">%</button>
+                <button class="btn operator" onclick="appendToDisplay('/')">÷</button>
+
+                <button class="btn" onclick="appendToDisplay('7')">7</button>
+                <button class="btn" onclick="appendToDisplay('8')">8</button>
+                <button class="btn" onclick="appendToDisplay('9')">9</button>
+                <button class="btn operator" onclick="appendToDisplay('*')">×</button>
+
+                <button class="btn" onclick="appendToDisplay('4')">4</button>
+                <button class="btn" onclick="appendToDisplay('5')">5</button>
+                <button class="btn" onclick="appendToDisplay('6')">6</button>
+                <button class="btn operator" onclick="appendToDisplay('-')">−</button>
+
+                <button class="btn" onclick="appendToDisplay('1')">1</button>
+                <button class="btn" onclick="appendToDisplay('2')">2</button>
+                <button class="btn" onclick="appendToDisplay('3')">3</button>
+                <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+
+                <button class="btn" onclick="appendToDisplay('0')">0</button>
+                <button class="btn" onclick="appendToDisplay('.')">.</button>
+                <button class="btn equal" onclick="calculateResult()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="CAL.JS"></script>
+</body>
+</html>
